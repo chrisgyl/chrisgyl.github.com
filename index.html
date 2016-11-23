@@ -66,7 +66,7 @@
   <title> Chris's HOME </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
@@ -122,7 +122,7 @@
             
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -132,7 +132,7 @@
             
               <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
-            Kategorien
+            Categories
           </a>
         </li>
       
@@ -152,7 +152,7 @@
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -162,7 +162,7 @@
             
               <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
             
-            Über
+            About
           </a>
         </li>
       
@@ -230,21 +230,21 @@
 
         <div class="post-meta">
           <span class="post-time">
-            Veröffentlicht am
+            Posted on
             <time itemprop="dateCreated" datetime="2016-11-22T17:09:26+08:00" content="2016-11-22">
               2016-11-22
             </time>
           </span>
           <span class="post-time">
             | 修改于
-            <time itemprop="dateCreated" datetime="2016-11-23T16:56:52+08:00" content="2016-11-23">
+            <time itemprop="dateCreated" datetime="2016-11-23T17:25:48+08:00" content="2016-11-23">
               2016-11-23
             </time>
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; in
+              &nbsp; | &nbsp; In
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/other/" itemprop="url" rel="index">
@@ -282,6 +282,7 @@
               <h2 id="关于搭建"><a href="#关于搭建" class="headerlink" title="关于搭建"></a>关于搭建</h2><h3 id="基本命令备忘"><a href="#基本命令备忘" class="headerlink" title="基本命令备忘"></a>基本命令备忘</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 新建文章</span></div><div class="line">hexo new <span class="string">"new-article-name"</span></div><div class="line"><span class="comment"># 生成页面</span></div><div class="line">hexo generate</div><div class="line"><span class="comment"># 启动本地localhost:4000预览</span></div><div class="line">hexo server</div><div class="line"><span class="comment"># 发布</span></div><div class="line">hexo generate</div></pre></td></tr></table></figure>
 <h3 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h3><p>刚搭建好的blog导航栏会定向到“Cannot GET /about/”的页面。解决方式以Categories为例：<br>运行命令行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"categories"</span></div></pre></td></tr></table></figure></p>
 <p>在生成的source/categories/index.md中编辑<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"分类"</span></div><div class="line">date: 2016-11-22 16:42:00</div><div class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>关于导航栏乱码的问题其实不是乱码，是我使用的主题pcman默认使用了de（不知道哪国语言。。）的language。在根目录下的_config.yml中配置language选项即可，可选的在主题目录的language下找，一般用en或者zh-Hans。</p>
 <h3 id="发布无效的坑"><a href="#发布无效的坑" class="headerlink" title="发布无效的坑"></a>发布无效的坑</h3><h4 id="1、未安装hexo-deployer-git"><a href="#1、未安装hexo-deployer-git" class="headerlink" title="1、未安装hexo-deployer-git"></a>1、未安装hexo-deployer-git</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <h4 id="2、-config-yml未配置"><a href="#2、-config-yml未配置" class="headerlink" title="2、_config.yml未配置"></a>2、_config.yml未配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:xxxxxxxxx.github.com.git,</div><div class="line">  branch: <span class="string">'master'</span></div></pre></td></tr></table></figure>
 <h4 id="3、github邮箱未认证"><a href="#3、github邮箱未认证" class="headerlink" title="3、github邮箱未认证"></a>3、github邮箱未认证</h4><p>这就是搞笑的，太撒比了。。。</p>
@@ -349,21 +350,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Kategorien</span>
+              <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Tags</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
@@ -406,7 +407,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
