@@ -221,7 +221,7 @@
               
                 
                 <a class="post-title-link" href="/2016/11/22/New-Test-Article/" itemprop="url">
-                  New Test Article
+                  BLOG搭建完工，紀念一下~~
                 </a>
               
             
@@ -237,7 +237,7 @@
           </span>
           <span class="post-time">
             | 修改于
-            <time itemprop="dateCreated" datetime="2016-11-23T16:15:12+08:00" content="2016-11-23">
+            <time itemprop="dateCreated" datetime="2016-11-23T16:56:52+08:00" content="2016-11-23">
               2016-11-23
             </time>
           </span>
@@ -279,7 +279,12 @@
         
           <span itemprop="articleBody">
             
-              <p>BLOG搭建完工，紀念一下~~</p>
+              <h2 id="关于搭建"><a href="#关于搭建" class="headerlink" title="关于搭建"></a>关于搭建</h2><h3 id="基本命令备忘"><a href="#基本命令备忘" class="headerlink" title="基本命令备忘"></a>基本命令备忘</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 新建文章</span></div><div class="line">hexo new <span class="string">"new-article-name"</span></div><div class="line"><span class="comment"># 生成页面</span></div><div class="line">hexo generate</div><div class="line"><span class="comment"># 启动本地localhost:4000预览</span></div><div class="line">hexo server</div><div class="line"><span class="comment"># 发布</span></div><div class="line">hexo generate</div></pre></td></tr></table></figure>
+<h3 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h3><p>刚搭建好的blog导航栏会定向到“Cannot GET /about/”的页面。解决方式以Categories为例：<br>运行命令行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"categories"</span></div></pre></td></tr></table></figure></p>
+<p>在生成的source/categories/index.md中编辑<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"分类"</span></div><div class="line">date: 2016-11-22 16:42:00</div><div class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
+<h3 id="发布无效的坑"><a href="#发布无效的坑" class="headerlink" title="发布无效的坑"></a>发布无效的坑</h3><h4 id="1、未安装hexo-deployer-git"><a href="#1、未安装hexo-deployer-git" class="headerlink" title="1、未安装hexo-deployer-git"></a>1、未安装hexo-deployer-git</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h4 id="2、-config-yml未配置"><a href="#2、-config-yml未配置" class="headerlink" title="2、_config.yml未配置"></a>2、_config.yml未配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:xxxxxxxxx.github.com.git,</div><div class="line">  branch: <span class="string">'master'</span></div></pre></td></tr></table></figure>
+<h4 id="3、github邮箱未认证"><a href="#3、github邮箱未认证" class="headerlink" title="3、github邮箱未认证"></a>3、github邮箱未认证</h4><p>这就是搞笑的，太撒比了。。。</p>
 
             
           </span>
